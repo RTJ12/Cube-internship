@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D (a+b)<sup>3</sup> Cube</title>
     <style>
-        /* Use a futuristic font */
+
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
         
         body { 
@@ -15,7 +15,7 @@
             align-items: center; 
             justify-content: center; 
             height: 100vh; 
-            background: radial-gradient(circle at center, #000428, #004e92); /* Futuristic gradient background */
+            background: radial-gradient(circle at center, #000428, #004e92); 
             font-family: 'Orbitron', sans-serif;
         }
 
@@ -27,16 +27,16 @@
             display: flex; 
             flex-direction: column; 
             align-items: center; 
-            color: white; /* White text for contrast against dark background */
+            color: white;
         }
 
         #ui { 
             color: rgb(255, 255, 255); 
             margin-top: 20px; 
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the UI */
+            background: rgba(0, 0, 0, 0.5);
             padding: 20px;
-            border-radius: 15px; /* Rounded corners */
-            box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.7); /* Glowing shadow for a futuristic look */
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.7); 
         }
 
         .slider { 
@@ -51,7 +51,7 @@
         }
 
         label span {
-            color: #00FFFF; /* Cyan color for labels */
+            color: #00FFFF; 
             font-weight: bold;
         }
 
@@ -79,9 +79,9 @@
             width: 16px;
             height: 16px;
             border-radius: 50%;
-            background: #00FFFF; /* Cyan color for slider thumb */
+            background: #00FFFF;
             cursor: pointer;
-            box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.9); /* Glowing slider thumb */
+            box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.9); 
         }
 
         input[type="range"]:hover {
@@ -90,7 +90,7 @@
 
         #topView {
             margin-bottom: 15px;
-            border: 2px solid #00FFFF; /* Cyan border around the top view */
+            border: 2px solid #00FFFF; 
             border-radius: 10px;
         }
 
@@ -125,7 +125,7 @@
             
             // Increase the canvas size for the 3D view
             renderer = new THREE.WebGLRenderer({ alpha: true });
-            renderer.setSize(window.innerWidth * 0.8, window.innerHeight * 0.8); // Increased canvas size to 80% of the window
+            renderer.setSize(window.innerWidth * 0.8, window.innerHeight * 0.8);
             document.body.insertBefore(renderer.domElement, document.getElementById('container'));
 
             // OrbitControls for user interaction
@@ -150,7 +150,7 @@
 
             createCubes();
             updateEquation();
-            camera.position.set(20, 20, 20); // Adjusted camera position for better view of the larger cube
+            camera.position.set(20, 20, 20); 
             camera.lookAt(0, 0, 0);
 
             animate();
@@ -247,7 +247,7 @@
 
         function animate() {
             requestAnimationFrame(animate);
-            controls.update();  // Update controls
+            controls.update(); 
             renderer.render(scene, camera);
             topViewRenderer.render(scene, topViewCamera);
         }
